@@ -27,7 +27,7 @@ Para instalar/executar este projeto, siga as seguintes etapas:
 
 - clone o repositorio.
 - rode npm install para instalar as depencias. 
-- use o script de banco de dados no seu mysql.
+- use o script de banco de dados no seu mysql, que esta presente no readme.
 - criei um dotenv igual ao de examplo contendo as informações do banco de dados, ou use dados integrados de um ambiente docker (ENV).
 - use npm start para inicia o projeto.
 

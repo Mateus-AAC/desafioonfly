@@ -1,0 +1,19 @@
+CREATE DATABASE IF NOT EXISTS onfly;
+
+USE onfly;
+
+CREATE TABLE IF NOT EXISTS users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS expenses (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    description VARCHAR(191) NOT NULL,
+    date DATE NOT NULL,
+    user_id INT NOT NULL,
+    value DECIMAL(10, 2) NOT NULL,
+    FOREIGN KEY (user_id) REFERENCES users(id)
+);
